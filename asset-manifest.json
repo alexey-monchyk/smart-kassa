@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/smart-kassa/static/css/main.5f361e03.chunk.css",
+    "main.js": "/smart-kassa/static/js/main.c2e355ff.chunk.js",
+    "main.js.map": "/smart-kassa/static/js/main.c2e355ff.chunk.js.map",
+    "runtime-main.js": "/smart-kassa/static/js/runtime-main.58a23ee0.js",
+    "runtime-main.js.map": "/smart-kassa/static/js/runtime-main.58a23ee0.js.map",
+    "static/js/2.59ebc542.chunk.js": "/smart-kassa/static/js/2.59ebc542.chunk.js",
+    "static/js/2.59ebc542.chunk.js.map": "/smart-kassa/static/js/2.59ebc542.chunk.js.map",
+    "index.html": "/smart-kassa/index.html",
+    "precache-manifest.9515f2f2b72e3744e873f55482872f9e.js": "/smart-kassa/precache-manifest.9515f2f2b72e3744e873f55482872f9e.js",
+    "service-worker.js": "/smart-kassa/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/smart-kassa/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.59ebc542.chunk.js.LICENSE.txt": "/smart-kassa/static/js/2.59ebc542.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/smart-kassa/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58a23ee0.js",
+    "static/js/2.59ebc542.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.c2e355ff.chunk.js"
+  ]
+}
