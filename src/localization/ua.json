@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "navBar": {
+      "items": {
+        "Outlets": "Мої торгові точки",
+        "Cash registers": "Мої смарт касси",
+        "Personal": "Працівники",
+        "Catalog": "Каталог товарів"
+      }
+    },
+    "outlets": {
+      "tableHeader": {
+        "Outlet name": "Назва торгової точки",
+        "Address": "Адреса",
+        "Status": "Статус",
+        "Equipment": "Обладнання",
+        "Workers": "Працівники"
+      },
+      "pageHeader": {
+        "My outlets": "Мої торгові точки"
+      }
+    },
+    "buttonLabels": {
+      "Add new outlet": "Додати торгову точку"
+    }
+  }
+}

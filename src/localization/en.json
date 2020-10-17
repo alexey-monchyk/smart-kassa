@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "navBar": {
+      "items": {
+        "Outlets": "My Outlets",
+        "Cash registers": "My Cash Registers",
+        "Personal": "Personal",
+        "Catalog": "Catalog"
+      }
+    },
+    "outlets": {
+      "tableHeader": {
+        "Outlet name": "Outlet name",
+        "Address": "Address",
+        "Status": "Status",
+        "Equipment": "Equipment",
+        "Workers": "Workers"
+      },
+      "pageHeader": {
+        "My outlets": "My outlets"
+      }
+    },
+    "buttonLabels": {
+      "Add new outlet": "Add new outlet"
+    }
+  }
+}
