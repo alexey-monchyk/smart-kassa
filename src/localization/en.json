@@ -18,6 +18,35 @@
       },
       "pageHeader": {
         "My outlets": "My outlets"
+      },
+      "createNewDialog": {
+        "title": "Create new outlet",
+        "create": "Create",
+        "cancel": "Cancel",
+        "name of outlet": "Name of outlet",
+        "status": "Status",
+        "city": "City",
+        "address": "Address",
+        "phoneNumber": "Phone number",
+        "email": "Email address",
+        "website": "Website",
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    },
+    "cashRegisters": {
+      "pageHeader": {
+        "equipment": "Equipment"
+      },
+      "card": {
+        "activate": "Activate",
+        "deactivate": "Deactivate",
+        "active": "Active",
+        "waitingActivation": "Waiting for activation",
+        "serialNumber": "Serial number",
+        "activationDate": "Activation date",
+        "cashRegister": "Cash register",
+        "addNew": "Add new cash register"
       }
     },
     "buttonLabels": {

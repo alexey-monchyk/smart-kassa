@@ -18,6 +18,35 @@
       },
       "pageHeader": {
         "My outlets": "Мої торгові точки"
+      },
+      "createNewDialog": {
+        "title": "Додати торгову точку",
+        "create": "Створити",
+        "cancel": "Скасувати",
+        "name of outlet": "Назва торгової точки",
+        "status": "Статус",
+        "city": "Місто",
+        "address": "Адреса",
+        "phoneNumber": "Номер мобільного телефону",
+        "email": "Електорнна пошта",
+        "website": "Веб-сайт",
+        "active": "Активна",
+        "inactive": "Неактивна"
+      }
+    },
+    "cashRegisters": {
+      "pageHeader": {
+        "equipment": "Обладнання"
+      },
+      "card": {
+        "activate": "Активувати",
+        "deactivate": "Деактивувати",
+        "active": "Активна",
+        "waitingActivation": "Очікує активації",
+        "serialNumber": "Серійний номер",
+        "activationDate": "Дата активації",
+        "cashRegister": "Каса",
+        "addNew": "Додати нову касу"
       }
     },
     "buttonLabels": {

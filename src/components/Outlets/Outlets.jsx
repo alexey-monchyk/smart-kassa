@@ -11,19 +11,26 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 
-import { rows } from './constants';
+import { rows as initialRows } from './constants';
 import useStyles from './useStyles';
 import {
   StyledTableCell,
   StyledTableRow,
   StyledHeaderTableCell,
+  CreateNewDialog,
 } from './components';
 
 const CashRegisters = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [rows, setRows] = useState(initialRows);
   const classes = useStyles();
   const { t } = useTranslation();
+
+  const handleCloseDialog = () => setDialogOpen(false);
+
+  const handleOpenDialog = () => setDialogOpen(true);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -33,6 +40,17 @@ const CashRegisters = () => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  const addNewOutlet = newOutlet => {
+    const preparedOutletData = {
+      ...newOutlet,
+      status: t(`outlets.createNewDialog.${newOutlet.status}`),
+      equipment: 0,
+      workers: 0,
+    }
+
+    setRows(prevRows => [preparedOutletData, ...prevRows]);
+  }
 
   const headerItems = [
     t('outlets.tableHeader.Outlet name'),
@@ -52,6 +70,7 @@ const CashRegisters = () => {
           variant="contained"
           color="secondary"
           startIcon={<AddIcon />}
+          onClick={handleOpenDialog}
         >
           {t('buttonLabels.Add new outlet')}
         </Button>
@@ -73,10 +92,10 @@ const CashRegisters = () => {
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell>{row.calories}</StyledTableCell>
-                <StyledTableCell>{row.fat}</StyledTableCell>
-                <StyledTableCell>{row.carbs}</StyledTableCell>
-                <StyledTableCell>{row.protein}</StyledTableCell>
+                <StyledTableCell>{row.address}</StyledTableCell>
+                <StyledTableCell>{row.status}</StyledTableCell>
+                <StyledTableCell>{row.equipment}</StyledTableCell>
+                <StyledTableCell>{row.workers}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -91,6 +110,11 @@ const CashRegisters = () => {
         page={page}
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
+      />
+      <CreateNewDialog
+        addNewOutlet={addNewOutlet}
+        open={dialogOpen}
+        handleClose={handleCloseDialog}
       />
     </>
   );

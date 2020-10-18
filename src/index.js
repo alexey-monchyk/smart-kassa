@@ -9,11 +9,9 @@ import Routes from './routes';
 import './localization/i18.config';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Routes />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+    <Routes />
+  </ThemeProvider>,
   document.getElementById('root'),
 );
