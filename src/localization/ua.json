@@ -47,6 +47,17 @@
         "activationDate": "Дата активації",
         "cashRegister": "Каса",
         "addNew": "Додати нову касу"
+      },
+      "addNewTerminalDialog": {
+        "title": "Додати термінал",
+        "outlet": "Торгова точка",
+        "save": "Зберегти"
+      },
+      "editTerminalDialog": {
+        "terminalManagement": "Управління торговим терміналом",
+        "save": "Зберегти",
+        "cancel": "Скасувати",
+        "name": "Назва"
       }
     },
     "buttonLabels": {

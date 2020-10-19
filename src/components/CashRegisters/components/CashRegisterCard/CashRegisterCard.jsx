@@ -1,33 +1,30 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Chip from '@material-ui/core/Chip';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 300,
-  },
-  media: {
-    height: 140,
-  },
-  header: {
-    marginBottom: 5,
-  },
-  descriptionItem: {
-    marginTop: 10,
-  },
-});
+import useStyles from './useStyles';
 
-const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) => {
+const CashRegisterCard = ({
+  name,
+  order,
+  activated,
+  serialNumber,
+  activationDate,
+  removeCashRegisterByOrder,
+  onActivateClick,
+}) => {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -37,6 +34,13 @@ const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) =>
 
   return (
     <Card className={classes.root}>
+      <CardHeader
+        action={(
+          <IconButton onClick={() => removeCashRegisterByOrder(order)}>
+            <CloseIcon />
+          </IconButton>
+        )}
+      />
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -47,9 +51,7 @@ const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) =>
           <Grid className={classes.header} justify="space-between" container spacing={2}>
             <Grid item>
               <Typography gutterBottom variant="h5" component="h2">
-                {t('cashRegisters.card.cashRegister')}
-                &nbsp;
-                {order}
+                {name}
               </Typography>
             </Grid>
             <Grid item>
@@ -78,7 +80,7 @@ const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) =>
               :
             </Typography>
             &nbsp;
-            {activationDate || '-'}
+            {activationDate}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -87,6 +89,7 @@ const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) =>
           variant={activated ? 'text' : 'contained'}
           fullWidth
           color={activated ? 'default' : 'secondary'}
+          onClick={() => onActivateClick(order)}
         >
           {buttonActivationLabel}
         </Button>
@@ -97,9 +100,16 @@ const CashRegisterCard = ({ order, activated, serialNumber, activationDate }) =>
 
 CashRegisterCard.propTypes = {
   order: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   activated: PropTypes.bool.isRequired,
   serialNumber: PropTypes.number.isRequired,
-  activationDate: PropTypes.string.isRequired,
+  activationDate: PropTypes.string,
+  removeCashRegisterByOrder: PropTypes.func.isRequired,
+  onActivateClick: PropTypes.func.isRequired,
+};
+
+CashRegisterCard.defaultProps = {
+  activationDate: '-',
 };
 
 export default CashRegisterCard;

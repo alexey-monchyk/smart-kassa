@@ -1,22 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { makeStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    border: `2px dashed ${theme.palette.secondary.main}`,
-    minWidth: 300,
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-}));
+import useStyles from './useStyles';
 
-const AddNewCardButton = () => {
+const AddNewCardButton = ({ onClick }) => {
   const classes = useStyles();
   const { t } = useTranslation();
 
@@ -24,10 +14,15 @@ const AddNewCardButton = () => {
     <Button
       className={classes.root}
       startIcon={<AddIcon fontSize="large" color="secondary" />}
+      onClick={onClick}
     >
       {t('cashRegisters.card.addNew')}
     </Button>
   );
+};
+
+AddNewCardButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default AddNewCardButton;

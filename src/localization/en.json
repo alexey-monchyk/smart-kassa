@@ -47,6 +47,17 @@
         "activationDate": "Activation date",
         "cashRegister": "Cash register",
         "addNew": "Add new cash register"
+      },
+      "addNewTerminalDialog": {
+        "title": "Add payment terminal",
+        "outlet": "Outlet",
+        "save": "Save"
+      },
+      "editTerminalDialog": {
+        "terminalManagement": "Terminal management",
+        "save": "Save",
+        "cancel": "Cancel",
+        "name": "Name"
       }
     },
     "buttonLabels": {

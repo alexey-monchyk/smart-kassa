@@ -47,7 +47,12 @@ const CreateNewDialogForm = ({ handleClose, addNewOutlet }) => {
         <Grid item xs={12} sm={6}>
           <FormControl fullWidth required variant="outlined">
             <InputLabel>{t('outlets.createNewDialog.status')}</InputLabel>
-            <Select onChange={handleChangeOutletFormValues} name="status" value={outletFormValues.status}>
+            <Select
+              onChange={handleChangeOutletFormValues}
+              name="status"
+              value={outletFormValues.status}
+              label={t('outlets.createNewDialog.status')}
+            >
               <MenuItem value="active">{t('outlets.createNewDialog.active')}</MenuItem>
               <MenuItem value="inactive">{t('outlets.createNewDialog.inactive')}</MenuItem>
             </Select>
