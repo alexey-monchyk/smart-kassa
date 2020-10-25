@@ -15,7 +15,8 @@ const MainContainer = () => (
       <Route path="/" component={Outlets} exact />
       <Route path="/cash-registers" component={CashRegisters} exact />
       <Route path="/personal" component={Personal} exact />
-      <Route path="/catalog" component={Catalog} exact />
+      <Route path="/catalogs" component={Catalog} exact />
+      <Route path="/catalogs/:catalogId" component={Catalog} exact />
     </Navigation>
   </>
 );

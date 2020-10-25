@@ -36,7 +36,7 @@ const Navigation = ({ children }) => {
     { label: t('navBar.items.Outlets'), to: '/', icon: <LocalMallIcon /> },
     { label: t('navBar.items.Cash registers'), to: '/cash-registers', icon: <LocalAtmIcon /> },
     { label: t('navBar.items.Personal'), to: '/personal', icon: <GroupIcon /> },
-    { label: t('navBar.items.Catalog'), to: '/catalog', icon: <BallotIcon /> },
+    { label: t('navBar.items.Catalog'), to: '/catalogs', icon: <BallotIcon /> },
   ];
 
   return (
