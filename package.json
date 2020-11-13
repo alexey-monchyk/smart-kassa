@@ -18,7 +18,12 @@
     "react-i18next": "^11.7.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-text-mask": "^5.4.3"
+    "react-dropzone": "^11.2.4",
+    "react-text-mask": "^5.4.3",
+    "gost89": "^0.1.8",
+    "jksreader": "^1.0.0",
+    "jkurwa": "^1.4.0",
+    "asn1.js": "github:muromec/asn1.js"
   },
   "scripts": {
     "start": "react-scripts start",

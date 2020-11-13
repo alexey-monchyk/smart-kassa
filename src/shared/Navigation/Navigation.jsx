@@ -15,6 +15,7 @@ import {
   LocalAtm as LocalAtmIcon,
   LocalMall as LocalMallIcon,
   Ballot as BallotIcon,
+  VpnKey as VpnKeyIcon,
   AccountCircle,
 } from '@material-ui/icons';
 import clsx from 'clsx';
@@ -37,6 +38,7 @@ const Navigation = ({ children }) => {
     { label: t('navBar.items.Cash registers'), to: '/cash-registers', icon: <LocalAtmIcon /> },
     { label: t('navBar.items.Personal'), to: '/personal', icon: <GroupIcon /> },
     { label: t('navBar.items.Catalog'), to: '/catalogs', icon: <BallotIcon /> },
+    { label: 'Пiдпис документiв', to: '/signer-box', icon: <VpnKeyIcon /> },
   ];
 
   return (

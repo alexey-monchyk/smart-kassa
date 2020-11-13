@@ -7,6 +7,7 @@ import {
   CashRegisters,
   Catalog,
   Personal,
+  SignerBox,
 } from '../components'
 
 const MainContainer = () => (
@@ -17,6 +18,7 @@ const MainContainer = () => (
       <Route path="/personal" component={Personal} exact />
       <Route path="/catalogs" component={Catalog} exact />
       <Route path="/catalogs/:catalogId" component={Catalog} exact />
+      <Route path="/signer-box" component={SignerBox} exact />
     </Navigation>
   </>
 );
